@@ -1,0 +1,12 @@
+CREATE TABLE `students` (
+	`student_id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`email`	TEXT,
+	`course_id`	INTEGER,
+	FOREIGN KEY(`course_id`) REFERENCES `course`(`course_id`)
+);
+
+CREATE TABLE `course` (
+	`course_id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`name`	TEXT
+);
+

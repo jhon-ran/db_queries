@@ -1,0 +1,14 @@
+CREATE TABLE `course` (
+	`course_id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT,
+	`description`	TEXT
+);
+
+CREATE TABLE `lesson` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT,
+	`body`	TEXT,
+	`course_id`	INTEGER,
+	FOREIGN KEY (courses_id) REFERENCES courses(courses_id)
+);
+
